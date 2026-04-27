@@ -1,0 +1,512 @@
+openapi: 3.0.3
+info:
+  title: 3D AI Studio API
+  description: |
+    API for 3D AI Studio generation and utility endpoints, including Tencent
+    Hunyuan 3D, TRELLIS.2, Tripo, Tripo P1, format conversion, task polling,
+    and wallet balance.
+
+    This OpenAPI document is manually maintained from the public 3D AI Studio
+    API documentation because 3D AI Studio does not publish a downloadable
+    OpenAPI document.
+  version: "1.0.0"
+servers:
+  - url: https://api.3daistudio.com
+security:
+  - BearerAuth: []
+tags:
+  - name: account
+  - name: hunyuan
+  - name: trellis
+  - name: tripo
+  - name: tools
+  - name: tasks
+paths:
+  /account/user/wallet/:
+    get:
+      operationId: getWallet
+      summary: Get wallet credit balance
+      tags: [account]
+      responses:
+        "200":
+          description: Wallet balance
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletResponse"
+  /v1/3d-models/tencent/generate/pro/:
+    post:
+      operationId: createTencentHunyuanProTask
+      summary: Generate a Hunyuan 3D model with the pro endpoint
+      tags: [hunyuan]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HunyuanGenerationRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tencent/generate/rapid/:
+    post:
+      operationId: createTencentHunyuanRapidTask
+      summary: Generate a Hunyuan 3D model with the rapid endpoint
+      tags: [hunyuan]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HunyuanGenerationRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/trellis2/generate/:
+    post:
+      operationId: createTrellis2Task
+      summary: Generate a TRELLIS.2 model from an image
+      tags: [trellis]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Trellis2GenerationRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/text-to-3d/:
+    post:
+      operationId: createTripoTextTo3DTask
+      summary: Generate a Tripo model from text
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoTextTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/text-to-3d/{version}/:
+    post:
+      operationId: createTripoTextTo3DVersionTask
+      summary: Generate a Tripo model from text with a specific model version
+      tags: [tripo]
+      parameters:
+        - name: version
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: ["3.0", "3.1"]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoTextTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/image-to-3d/:
+    post:
+      operationId: createTripoImageTo3DTask
+      summary: Generate a Tripo model from one image
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoImageTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/image-to-3d/{version}/:
+    post:
+      operationId: createTripoImageTo3DVersionTask
+      summary: Generate a Tripo model from one image with a specific model version
+      tags: [tripo]
+      parameters:
+        - name: version
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: ["3.0", "3.1"]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoImageTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/multiview-to-3d/:
+    post:
+      operationId: createTripoMultiviewTo3DTask
+      summary: Generate a Tripo model from multiple views
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoMultiviewTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/multiview-to-3d/{version}/:
+    post:
+      operationId: createTripoMultiviewTo3DVersionTask
+      summary: Generate a Tripo model from multiple views with a specific model version
+      tags: [tripo]
+      parameters:
+        - name: version
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: ["3.0", "3.1"]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoMultiviewTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/text-to-3d/p1/:
+    post:
+      operationId: createTripoP1TextTo3DTask
+      summary: Generate a Tripo P1 model from text
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoTextTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/image-to-3d/p1/:
+    post:
+      operationId: createTripoP1ImageTo3DTask
+      summary: Generate a Tripo P1 model from one image
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoImageTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/3d-models/tripo/multiview-to-3d/p1/:
+    post:
+      operationId: createTripoP1MultiviewTo3DTask
+      summary: Generate a Tripo P1 model from multiple views
+      tags: [tripo]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TripoMultiviewTo3DRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/tools/convert/:
+    post:
+      operationId: createConvertTask
+      summary: Convert a model file
+      tags: [tools]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConvertRequest"
+      responses:
+        "200":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationTaskResponse"
+  /v1/generation-request/{task_id}/status/:
+    get:
+      operationId: getGenerationRequestStatus
+      summary: Get generation task status
+      tags: [tasks]
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Generation task status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerationStatusResponse"
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    WalletResponse:
+      type: object
+      properties:
+        credits:
+          type: number
+          format: double
+        balance:
+          type: number
+          format: double
+        total_credits:
+          type: number
+          format: double
+        used_credits:
+          type: number
+          format: double
+    HunyuanGenerationRequest:
+      type: object
+      properties:
+        image:
+          type: string
+          description: Base64-encoded image input.
+        image_url:
+          type: string
+          format: uri
+        prompt:
+          type: string
+        seed:
+          type: integer
+        texture:
+          type: boolean
+        pbr:
+          type: boolean
+        face_limit:
+          type: integer
+        format:
+          type: string
+          enum: [glb, obj, fbx, stl, usdz]
+    Trellis2GenerationRequest:
+      type: object
+      properties:
+        image:
+          type: string
+          description: Base64-encoded image input.
+        image_url:
+          type: string
+          format: uri
+        resolution:
+          type: string
+          enum: ["512", "1024", "1536"]
+        steps:
+          type: integer
+          minimum: 1
+          maximum: 50
+        textures:
+          type: boolean
+        texture_size:
+          type: integer
+          enum: [1024, 2048, 4096]
+        decimation_target:
+          type: integer
+        seed:
+          type: integer
+        generate_thumbnail:
+          type: boolean
+    TripoSharedGenerationRequest:
+      type: object
+      properties:
+        negative_prompt:
+          type: string
+          maxLength: 1024
+        texture:
+          type: boolean
+        pbr:
+          type: boolean
+        texture_quality:
+          type: string
+          enum: [standard, detailed]
+        texture_seed:
+          type: integer
+        geometry_quality:
+          type: string
+          enum: [standard, detailed]
+        face_limit:
+          type: integer
+        quad:
+          type: boolean
+        smart_low_poly:
+          type: boolean
+        generate_parts:
+          type: boolean
+        export_uv:
+          type: boolean
+        auto_size:
+          type: boolean
+        compress:
+          type: string
+          enum: [geometry]
+    TripoTextTo3DRequest:
+      allOf:
+        - $ref: "#/components/schemas/TripoSharedGenerationRequest"
+        - type: object
+          required: [prompt]
+          properties:
+            prompt:
+              type: string
+              maxLength: 1024
+    TripoImageTo3DRequest:
+      allOf:
+        - $ref: "#/components/schemas/TripoSharedGenerationRequest"
+        - type: object
+          properties:
+            image:
+              type: string
+              description: Base64-encoded image input.
+            image_url:
+              type: string
+              format: uri
+            texture_alignment:
+              type: string
+              enum: [original_image, geometry]
+            enable_image_autofix:
+              type: boolean
+    TripoMultiviewTo3DRequest:
+      allOf:
+        - $ref: "#/components/schemas/TripoSharedGenerationRequest"
+        - type: object
+          required: [images]
+          properties:
+            images:
+              type: array
+              minItems: 2
+              maxItems: 4
+              items:
+                $ref: "#/components/schemas/TripoImageInput"
+            texture_alignment:
+              type: string
+              enum: [original_image, geometry]
+    TripoImageInput:
+      type: object
+      properties:
+        image:
+          type: string
+        image_url:
+          type: string
+          format: uri
+        view:
+          type: string
+    ConvertRequest:
+      type: object
+      properties:
+        model_url:
+          type: string
+          format: uri
+        model:
+          type: string
+        output_format:
+          type: string
+          enum: [glb, obj, fbx, stl, usdz]
+    GenerationTaskResponse:
+      type: object
+      properties:
+        task_id:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+    GenerationStatusResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [PENDING, RUNNING, FINISHED, FAILED, CANCELLED]
+        progress:
+          type: integer
+        failure_reason:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/GenerationResult"
+    GenerationResult:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        download_url:
+          type: string
+          format: uri
+        type:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          nullable: true
