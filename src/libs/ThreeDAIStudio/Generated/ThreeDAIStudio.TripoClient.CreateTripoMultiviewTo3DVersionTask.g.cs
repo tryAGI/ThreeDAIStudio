@@ -136,7 +136,7 @@ namespace ThreeDAIStudio
                 PrepareCreateTripoMultiviewTo3DVersionTaskRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    version: version,
+                    version: version!,
                     request: request);
 
                 return __httpRequest;
