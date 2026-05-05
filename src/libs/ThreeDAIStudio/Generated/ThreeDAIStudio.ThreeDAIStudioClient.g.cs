@@ -48,7 +48,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public AccountClient Account => new AccountClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AccountClient Account => new AccountClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -57,7 +57,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public HunyuanClient Hunyuan => new HunyuanClient(HttpClient, authorizations: Authorizations, options: Options)
+        public HunyuanClient Hunyuan => new HunyuanClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -66,7 +66,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public TasksClient Tasks => new TasksClient(HttpClient, authorizations: Authorizations, options: Options)
+        public TasksClient Tasks => new TasksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -75,7 +75,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public ToolsClient Tools => new ToolsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -84,7 +84,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public TrellisClient Trellis => new TrellisClient(HttpClient, authorizations: Authorizations, options: Options)
+        public TrellisClient Trellis => new TrellisClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -93,7 +93,7 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
-        public TripoClient Tripo => new TripoClient(HttpClient, authorizations: Authorizations, options: Options)
+        public TripoClient Tripo => new TripoClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -132,10 +132,10 @@ namespace ThreeDAIStudio
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public ThreeDAIStudioClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::ThreeDAIStudio.EndPointAuthorization>? authorizations = null,
-            global::ThreeDAIStudio.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::ThreeDAIStudio.EndPointAuthorization>? authorizations,
+            global::ThreeDAIStudio.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 
