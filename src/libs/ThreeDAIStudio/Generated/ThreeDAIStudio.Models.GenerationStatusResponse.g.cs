@@ -67,5 +67,6 @@ namespace ThreeDAIStudio
         public GenerationStatusResponse()
         {
         }
+
     }
 }

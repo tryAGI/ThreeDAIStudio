@@ -50,5 +50,6 @@ namespace ThreeDAIStudio
         public TripoMultiviewTo3DRequestVariant2()
         {
         }
+
     }
 }

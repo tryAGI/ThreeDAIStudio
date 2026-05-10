@@ -40,5 +40,6 @@ namespace ThreeDAIStudio
         public TripoTextTo3DRequestVariant2()
         {
         }
+
     }
 }

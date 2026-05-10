@@ -66,5 +66,6 @@ namespace ThreeDAIStudio
         public WalletResponse()
         {
         }
+
     }
 }

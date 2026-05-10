@@ -69,5 +69,6 @@ namespace ThreeDAIStudio
         public TripoImageTo3DRequestVariant2()
         {
         }
+
     }
 }

@@ -105,5 +105,6 @@ namespace ThreeDAIStudio
         public HunyuanGenerationRequest()
         {
         }
+
     }
 }
