@@ -91,6 +91,7 @@ namespace ThreeDAIStudio.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::ThreeDAIStudio.TripoSharedGenerationRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::ThreeDAIStudio.TripoSharedGenerationRequest> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::ThreeDAIStudio.TripoSharedGenerationRequest).Name}");
                     sharedGeneration = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -101,9 +102,13 @@ namespace ThreeDAIStudio.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (sharedGeneration == null && tripoImageTo3DRequestVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::ThreeDAIStudio.TripoImageTo3DRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::ThreeDAIStudio.TripoImageTo3DRequestVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::ThreeDAIStudio.TripoImageTo3DRequestVariant2).Name}");
                     tripoImageTo3DRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
