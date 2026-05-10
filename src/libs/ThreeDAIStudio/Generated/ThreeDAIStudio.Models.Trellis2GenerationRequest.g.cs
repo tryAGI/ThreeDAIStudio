@@ -114,5 +114,6 @@ namespace ThreeDAIStudio
         public Trellis2GenerationRequest()
         {
         }
+
     }
 }

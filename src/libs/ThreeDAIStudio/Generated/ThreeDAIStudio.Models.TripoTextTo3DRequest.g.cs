@@ -42,6 +42,13 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
+        public global::ThreeDAIStudio.TripoSharedGenerationRequest PickSharedGeneration() => IsSharedGeneration
+            ? SharedGeneration!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SharedGeneration' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::ThreeDAIStudio.TripoTextTo3DRequestVariant2? TripoTextTo3DRequestVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace ThreeDAIStudio
             value = TripoTextTo3DRequestVariant2;
             return IsTripoTextTo3DRequestVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::ThreeDAIStudio.TripoTextTo3DRequestVariant2 PickTripoTextTo3DRequestVariant2() => IsTripoTextTo3DRequestVariant2
+            ? TripoTextTo3DRequestVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TripoTextTo3DRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

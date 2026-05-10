@@ -48,5 +48,6 @@ namespace ThreeDAIStudio
         public GenerationTaskResponse()
         {
         }
+
     }
 }

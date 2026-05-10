@@ -150,5 +150,6 @@ namespace ThreeDAIStudio
         public TripoSharedGenerationRequest()
         {
         }
+
     }
 }
