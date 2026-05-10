@@ -89,6 +89,11 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
+        public static TripoTextTo3DRequest FromSharedGeneration(global::ThreeDAIStudio.TripoSharedGenerationRequest? value) => new TripoTextTo3DRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TripoTextTo3DRequest(global::ThreeDAIStudio.TripoTextTo3DRequestVariant2 value) => new TripoTextTo3DRequest((global::ThreeDAIStudio.TripoTextTo3DRequestVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace ThreeDAIStudio
         {
             TripoTextTo3DRequestVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TripoTextTo3DRequest FromTripoTextTo3DRequestVariant2(global::ThreeDAIStudio.TripoTextTo3DRequestVariant2? value) => new TripoTextTo3DRequest(value);
 
         /// <summary>
         /// 
