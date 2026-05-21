@@ -75,5 +75,6 @@ namespace ThreeDAIStudio
         public GenerationResult()
         {
         }
+
     }
 }

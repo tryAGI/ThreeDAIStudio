@@ -29,6 +29,26 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickSharedGeneration(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::ThreeDAIStudio.TripoSharedGenerationRequest? value)
+        {
+            value = SharedGeneration;
+            return IsSharedGeneration;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::ThreeDAIStudio.TripoSharedGenerationRequest PickSharedGeneration() => IsSharedGeneration
+            ? SharedGeneration!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SharedGeneration' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::ThreeDAIStudio.TripoTextTo3DRequestVariant2? TripoTextTo3DRequestVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace ThreeDAIStudio
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TripoTextTo3DRequestVariant2))]
 #endif
         public bool IsTripoTextTo3DRequestVariant2 => TripoTextTo3DRequestVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTripoTextTo3DRequestVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::ThreeDAIStudio.TripoTextTo3DRequestVariant2? value)
+        {
+            value = TripoTextTo3DRequestVariant2;
+            return IsTripoTextTo3DRequestVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::ThreeDAIStudio.TripoTextTo3DRequestVariant2 PickTripoTextTo3DRequestVariant2() => IsTripoTextTo3DRequestVariant2
+            ? TripoTextTo3DRequestVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TripoTextTo3DRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace ThreeDAIStudio
         /// <summary>
         /// 
         /// </summary>
+        public static TripoTextTo3DRequest FromSharedGeneration(global::ThreeDAIStudio.TripoSharedGenerationRequest? value) => new TripoTextTo3DRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TripoTextTo3DRequest(global::ThreeDAIStudio.TripoTextTo3DRequestVariant2 value) => new TripoTextTo3DRequest((global::ThreeDAIStudio.TripoTextTo3DRequestVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace ThreeDAIStudio
         {
             TripoTextTo3DRequestVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TripoTextTo3DRequest FromTripoTextTo3DRequestVariant2(global::ThreeDAIStudio.TripoTextTo3DRequestVariant2? value) => new TripoTextTo3DRequest(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace ThreeDAIStudio
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::ThreeDAIStudio.TripoSharedGenerationRequest?, TResult>? sharedGeneration = null,
-            global::System.Func<global::ThreeDAIStudio.TripoTextTo3DRequestVariant2?, TResult>? tripoTextTo3DRequestVariant2 = null,
+            global::System.Func<global::ThreeDAIStudio.TripoSharedGenerationRequest, TResult>? sharedGeneration = null,
+            global::System.Func<global::ThreeDAIStudio.TripoTextTo3DRequestVariant2, TResult>? tripoTextTo3DRequestVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace ThreeDAIStudio
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::ThreeDAIStudio.TripoSharedGenerationRequest?>? sharedGeneration = null,
-            global::System.Action<global::ThreeDAIStudio.TripoTextTo3DRequestVariant2?>? tripoTextTo3DRequestVariant2 = null,
+            global::System.Action<global::ThreeDAIStudio.TripoSharedGenerationRequest>? sharedGeneration = null,
+
+            global::System.Action<global::ThreeDAIStudio.TripoTextTo3DRequestVariant2>? tripoTextTo3DRequestVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsSharedGeneration)
+            {
+                sharedGeneration?.Invoke(SharedGeneration!);
+            }
+            else if (IsTripoTextTo3DRequestVariant2)
+            {
+                tripoTextTo3DRequestVariant2?.Invoke(TripoTextTo3DRequestVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::ThreeDAIStudio.TripoSharedGenerationRequest>? sharedGeneration = null,
+            global::System.Action<global::ThreeDAIStudio.TripoTextTo3DRequestVariant2>? tripoTextTo3DRequestVariant2 = null,
             bool validate = true)
         {
             if (validate)
