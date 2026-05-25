@@ -114,7 +114,7 @@ namespace ThreeDAIStudio
             {
 
                             var __pathBuilder = new global::ThreeDAIStudio.PathBuilder(
-                                path: $"/v1/3d-models/tripo/text-to-3d/{version}/",
+                                path: $"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -182,7 +182,7 @@ namespace ThreeDAIStudio
                             context: global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "CreateTripoTextTo3DVersionTask",
                                 methodName: "CreateTripoTextTo3DVersionTaskAsync",
-                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{version}/\"",
+                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -216,7 +216,7 @@ namespace ThreeDAIStudio
                             context: global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "CreateTripoTextTo3DVersionTask",
                                 methodName: "CreateTripoTextTo3DVersionTaskAsync",
-                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{version}/\"",
+                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -257,7 +257,7 @@ namespace ThreeDAIStudio
                             context: global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "CreateTripoTextTo3DVersionTask",
                                 methodName: "CreateTripoTextTo3DVersionTaskAsync",
-                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{version}/\"",
+                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -305,7 +305,7 @@ namespace ThreeDAIStudio
                             context: global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "CreateTripoTextTo3DVersionTask",
                                 methodName: "CreateTripoTextTo3DVersionTaskAsync",
-                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{version}/\"",
+                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -327,7 +327,7 @@ namespace ThreeDAIStudio
                             context: global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "CreateTripoTextTo3DVersionTask",
                                 methodName: "CreateTripoTextTo3DVersionTaskAsync",
-                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{version}/\"",
+                                pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
