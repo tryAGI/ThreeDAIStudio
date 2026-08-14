@@ -39,10 +39,17 @@ namespace ThreeDAIStudio
 
         /// <inheritdoc/>
         public global::ThreeDAIStudio.AutoSDKClientOptions Options { get; }
+
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::ThreeDAIStudio.SourceGenerationContext.Default);
+
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::ThreeDAIStudio.SourceGenerationContext.Default;
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
+        {
+            get => JsonSerializerContextProvider.Value;
+            set => JsonSerializerContextProvider = new(() => value);
+        }
 
 
         /// <summary>
@@ -51,7 +58,7 @@ namespace ThreeDAIStudio
         public AccountClient Account => new AccountClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -60,7 +67,7 @@ namespace ThreeDAIStudio
         public HunyuanClient Hunyuan => new HunyuanClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -69,7 +76,7 @@ namespace ThreeDAIStudio
         public TasksClient Tasks => new TasksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -78,7 +85,7 @@ namespace ThreeDAIStudio
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -87,7 +94,7 @@ namespace ThreeDAIStudio
         public TrellisClient Trellis => new TrellisClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -96,7 +103,7 @@ namespace ThreeDAIStudio
         public TripoClient Tripo => new TripoClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
