@@ -4,12 +4,12 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TripoTextTo3DRequestVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonRequired]

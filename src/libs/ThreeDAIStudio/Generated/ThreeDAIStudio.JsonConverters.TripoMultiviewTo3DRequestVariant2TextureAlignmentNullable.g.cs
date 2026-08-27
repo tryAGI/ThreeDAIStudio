@@ -20,7 +20,7 @@ namespace ThreeDAIStudio.JsonConverters
                     {
                         return global::ThreeDAIStudio.TripoMultiviewTo3DRequestVariant2TextureAlignmentExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

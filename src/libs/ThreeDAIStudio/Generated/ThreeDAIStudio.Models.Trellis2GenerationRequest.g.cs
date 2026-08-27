@@ -4,7 +4,7 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Trellis2GenerationRequest
     {
@@ -15,50 +15,50 @@ namespace ThreeDAIStudio
         public string? Image { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image_url")]
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resolution")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::ThreeDAIStudio.JsonConverters.Trellis2GenerationRequestResolutionJsonConverter))]
         public global::ThreeDAIStudio.Trellis2GenerationRequestResolution? Resolution { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("steps")]
         public int? Steps { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("textures")]
         public bool? Textures { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("texture_size")]
         public int? TextureSize { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("decimation_target")]
         public int? DecimationTarget { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
         public int? Seed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("generate_thumbnail")]
         public bool? GenerateThumbnail { get; set; }

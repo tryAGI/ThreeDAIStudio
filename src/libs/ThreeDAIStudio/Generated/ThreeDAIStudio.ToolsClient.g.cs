@@ -10,7 +10,7 @@ namespace ThreeDAIStudio
     public sealed partial class ToolsClient : global::ThreeDAIStudio.IToolsClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.3daistudio.com/";
 
@@ -37,7 +37,7 @@ namespace ThreeDAIStudio
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::ThreeDAIStudio.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

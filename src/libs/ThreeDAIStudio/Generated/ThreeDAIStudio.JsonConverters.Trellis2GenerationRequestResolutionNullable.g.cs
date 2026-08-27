@@ -20,7 +20,7 @@ namespace ThreeDAIStudio.JsonConverters
                     {
                         return global::ThreeDAIStudio.Trellis2GenerationRequestResolutionExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

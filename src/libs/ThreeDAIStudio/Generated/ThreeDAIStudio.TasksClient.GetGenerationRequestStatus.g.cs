@@ -132,7 +132,7 @@ namespace ThreeDAIStudio
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::ThreeDAIStudio.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

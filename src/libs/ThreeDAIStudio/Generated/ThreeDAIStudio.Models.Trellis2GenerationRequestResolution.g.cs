@@ -4,20 +4,20 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum Trellis2GenerationRequestResolution
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1536,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x512,
     }
