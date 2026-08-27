@@ -4,7 +4,7 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TripoImageTo3DRequestVariant2
     {
@@ -15,20 +15,20 @@ namespace ThreeDAIStudio
         public string? Image { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image_url")]
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("texture_alignment")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::ThreeDAIStudio.JsonConverters.TripoImageTo3DRequestVariant2TextureAlignmentJsonConverter))]
         public global::ThreeDAIStudio.TripoImageTo3DRequestVariant2TextureAlignment? TextureAlignment { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enable_image_autofix")]
         public bool? EnableImageAutofix { get; set; }

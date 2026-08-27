@@ -4,28 +4,28 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum HunyuanGenerationRequestFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fbx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Glb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Obj,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Usdz,
     }

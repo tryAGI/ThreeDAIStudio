@@ -4,16 +4,16 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TripoSharedGenerationRequestTextureQuality
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Detailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Standard,
     }

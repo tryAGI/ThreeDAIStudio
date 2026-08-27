@@ -16,7 +16,7 @@ namespace ThreeDAIStudio
     public sealed partial class ThreeDAIStudioClient : global::ThreeDAIStudio.IThreeDAIStudioClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.3daistudio.com/";
 
@@ -43,7 +43,7 @@ namespace ThreeDAIStudio
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::ThreeDAIStudio.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -53,7 +53,7 @@ namespace ThreeDAIStudio
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AccountClient Account => new AccountClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -62,7 +62,7 @@ namespace ThreeDAIStudio
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HunyuanClient Hunyuan => new HunyuanClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -71,7 +71,7 @@ namespace ThreeDAIStudio
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TasksClient Tasks => new TasksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -80,7 +80,7 @@ namespace ThreeDAIStudio
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -89,7 +89,7 @@ namespace ThreeDAIStudio
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TrellisClient Trellis => new TrellisClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -98,7 +98,7 @@ namespace ThreeDAIStudio
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TripoClient Tripo => new TripoClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

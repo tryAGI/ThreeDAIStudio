@@ -4,16 +4,16 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TripoImageTo3DRequestVariant2TextureAlignment
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Geometry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OriginalImage,
     }

@@ -45,38 +45,38 @@ namespace ThreeDAIStudio
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AccountClient Account { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HunyuanClient Hunyuan { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TasksClient Tasks { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TrellisClient Trellis { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TripoClient Tripo { get; }
 

@@ -4,7 +4,7 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerationResultMetadata
     {

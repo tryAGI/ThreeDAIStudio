@@ -4,16 +4,16 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateTripoTextTo3DVersionTaskVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x31,
     }

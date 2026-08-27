@@ -4,12 +4,12 @@
 namespace ThreeDAIStudio
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TripoSharedGenerationRequestCompress
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Geometry,
     }
