@@ -162,7 +162,7 @@ namespace ThreeDAIStudio
                 PrepareCreateTripoTextTo3DVersionTaskRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    version: version!,
+                    version: version,
                     request: request);
 
                 return __httpRequest;
@@ -185,7 +185,7 @@ namespace ThreeDAIStudio
                                 pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -219,7 +219,7 @@ namespace ThreeDAIStudio
                                 pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -260,7 +260,7 @@ namespace ThreeDAIStudio
                                 pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -308,7 +308,7 @@ namespace ThreeDAIStudio
                                 pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -330,7 +330,7 @@ namespace ThreeDAIStudio
                                 pathTemplate: "$\"/v1/3d-models/tripo/text-to-3d/{(global::System.Uri.EscapeDataString(version.ToValueString()))}/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

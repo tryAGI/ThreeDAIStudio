@@ -42,8 +42,8 @@ namespace ThreeDAIStudio
         /// <summary>
         ///
         /// </summary>
-        public global::ThreeDAIStudio.TripoSharedGenerationRequest PickSharedGeneration() => IsSharedGeneration
-            ? SharedGeneration!
+        public global::ThreeDAIStudio.TripoSharedGenerationRequest PickSharedGeneration() => SharedGeneration is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SharedGeneration' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace ThreeDAIStudio
         /// <summary>
         ///
         /// </summary>
-        public global::ThreeDAIStudio.TripoMultiviewTo3DRequestVariant2 PickTripoMultiviewTo3DRequestVariant2() => IsTripoMultiviewTo3DRequestVariant2
-            ? TripoMultiviewTo3DRequestVariant2!
+        public global::ThreeDAIStudio.TripoMultiviewTo3DRequestVariant2 PickTripoMultiviewTo3DRequestVariant2() => TripoMultiviewTo3DRequestVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TripoMultiviewTo3DRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace ThreeDAIStudio
                 Validate();
             }
 
-            if (IsSharedGeneration && sharedGeneration != null)
+            if (SharedGeneration is { } __value0 && sharedGeneration != null)
             {
-                return sharedGeneration(SharedGeneration!);
+                return sharedGeneration(__value0);
             }
-            else if (IsTripoMultiviewTo3DRequestVariant2 && tripoMultiviewTo3DRequestVariant2 != null)
+            else if (TripoMultiviewTo3DRequestVariant2 is { } __value1 && tripoMultiviewTo3DRequestVariant2 != null)
             {
-                return tripoMultiviewTo3DRequestVariant2(TripoMultiviewTo3DRequestVariant2!);
+                return tripoMultiviewTo3DRequestVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace ThreeDAIStudio
                 Validate();
             }
 
-            if (IsSharedGeneration)
+            if (SharedGeneration is { } __value0)
             {
-                sharedGeneration?.Invoke(SharedGeneration!);
+                sharedGeneration?.Invoke(__value0);
             }
-            else if (IsTripoMultiviewTo3DRequestVariant2)
+            else if (TripoMultiviewTo3DRequestVariant2 is { } __value1)
             {
-                tripoMultiviewTo3DRequestVariant2?.Invoke(TripoMultiviewTo3DRequestVariant2!);
+                tripoMultiviewTo3DRequestVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace ThreeDAIStudio
                 Validate();
             }
 
-            if (IsSharedGeneration)
+            if (SharedGeneration is { } __value0)
             {
-                sharedGeneration?.Invoke(SharedGeneration!);
+                sharedGeneration?.Invoke(__value0);
             }
-            else if (IsTripoMultiviewTo3DRequestVariant2)
+            else if (TripoMultiviewTo3DRequestVariant2 is { } __value1)
             {
-                tripoMultiviewTo3DRequestVariant2?.Invoke(TripoMultiviewTo3DRequestVariant2!);
+                tripoMultiviewTo3DRequestVariant2?.Invoke(__value1);
             }
         }
 
