@@ -31,6 +31,10 @@ namespace ThreeDAIStudio.JsonConverters
             catch (global::System.InvalidOperationException)
             {
             }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
+            }
 
             global::ThreeDAIStudio.TripoMultiviewTo3DRequestVariant2? tripoMultiviewTo3DRequestVariant2 = default;
             try
@@ -44,6 +48,10 @@ namespace ThreeDAIStudio.JsonConverters
             }
             catch (global::System.InvalidOperationException)
             {
+            }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
             }
             var __value = new global::ThreeDAIStudio.TripoMultiviewTo3DRequest(
                 sharedGeneration,
